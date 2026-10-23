@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Until I'm in Your Arms Again ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+  --cream: #fffaf6;
+  --pink: #f3dadd;
+  --rose: #b75e70;
+  --dark: #533a40;
+  --muted: #92757b;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+}
+
+.hero {
+  min-height: 95vh;
+  padding: 75px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 15% 20%, #f8e8e6 0, transparent 38%),
+    radial-gradient(ellipse at 90% 75%, #f3e4dc 0, transparent 35%),
+    var(--cream);
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(43px, 8vw, 76px);
+  line-height: 1.15;
+  margin: 24px 0;
+}
+
+h1 em { color: var(--rose); }
+
+.intro {
+  max-width: 470px;
+  line-height: 2;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.heart {
+  color: var(--rose);
+  font-size: 35px;
+  margin: 12px 0;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.15); }
+}
+
+.btn {
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin-top: 22px;
+  background: var(--rose);
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 8px 25px #b75e7020;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #98495b;
+}
+
+.section {
+  padding: 75px 20px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: clamp(32px, 6vw, 45px);
+  margin: 17px 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.distance {
+  padding: 48px 20px;
+  background: #f8e9e7;
+}
+
+.distance h2 {
+  font-size: 36px;
+  margin: 17px 0;
+}
+
+.distance p {
+  max-width: 520px;
+  margin: auto;
+  color: #795b62;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.mapline {
+  margin: 27px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  color: var(--rose);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.mapline .line {
+  width: 70px;
+  border-top: 1px dashed var(--rose);
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.letter {
+  border: 1px solid #efdadd;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.letter summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 20px;
+}
+
+.letter summary::-webkit-details-marker {
+  display: none;
+}
+
+.letter summary span {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 13px;
+}
+
+.letter summary strong {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.letter summary small {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.letter p {
+  margin: 0;
+  padding: 0 20px 24px;
+  font-size: 13px;
+  line-height: 2;
+  color: #795b62;
+}
+
+.memory {
+  background: #fff;
+  border-top: 1px solid #f4e5e4;
+  border-bottom: 1px solid #f4e5e4;
+}
+
+.memory blockquote {
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 4vw, 30px);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--rose);
+}
+
+.surprise {
+  margin: 55px 18px 70px;
+  padding: 55px 22px;
+  border-radius: 24px;
+  background: #f8e9e7;
+}
+
+.surprise h2 {
+  font-size: clamp(31px, 6vw, 43px);
+  margin: 16px 0;
+}
+
+#secret {
+  display: none;
+  max-width: 520px;
+  margin: 28px auto 0;
+  line-height: 2;
+  color: #79515c;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  padding: 30px 20px 45px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+}
+
+footer span { color: var(--rose); }
+
+@media (max-width: 480px) {
+  .hero { min-height: 85vh; }
+  .section { padding-top: 55px; padding-bottom: 55px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="eyebrow">From Romania, with all my love</div>
+  <div class="heart">♡</div>
+
+  <h1>Half a world<br>away, <em>still my home.</em></h1>
+
+  <p class="intro">
+    You are in America, I'm here in Romania, and some days
+    the distance feels a little too big.
+    I wish I could be next to you right now, steal a kiss,
+    hug you for a little longer, and pretend that goodbye
+    doesn't exist.
+    <br><br>
+    This isn't for a birthday or a special occasion.
+    I just miss you. And I wanted you to know. ♡
+  </p>
+
+  <button class="btn"
+    onclick="document.getElementById('distance').scrollIntoView({behavior:'smooth'})">
+    A little piece of my heart ♡
+  </button>
+</header>
+
+<main>
+
+<section class="distance" id="distance">
+  <div class="eyebrow">Romania ♡ America</div>
+  <h2>Two places. One little love story.</h2>
+
+  <p>
+    Sometimes I wish the ocean between us was just a street
+    I could cross to get to you.
+    Instead, I count the days, replay our memories,
+    and imagine the moment I'll finally see you again.
+    <br><br>
+    I miss your arms around me, your kisses, your smile,
+    and all those ordinary little moments that became
+    my favourite memories.
+    <br><br>
+    No time difference or number of miles can make those
+    moments mean any less to me.
+  </p>
+
+  <div class="mapline">
+    <span>ROMANIA</span>
+    <span class="line"></span>
+    <span>AMERICA</span>
+  </div>
+</section>
+
+<section class="section" id="letters">
+  <div class="eyebrow">Things I wish I could tell you in person</div>
+  <h2>Open when you miss me…</h2>
+
+  <p class="subtitle">
+    If I can't be there to say these things while holding your hand,
+    maybe these little letters can bring me a little closer to you.
+    Open whichever one you need. ♡
+  </p>
+
+  <div class="letters">
+
+    <details class="letter">
+      <summary>
+        <span>💋</span>
+        <strong>When you miss my kisses</strong>
+        <small>Open this little letter ↗</small>
+      </summary>
+      <p>
+        Do you remember our little kisses by the fridge?
+        Such a silly, ordinary place, yet somehow one of the
+        sweetest memories I have of us.
+        I would give anything to stand there with you again,
+        steal another kiss, smile at you, and forget about
+        everything else for a moment.
+        <br><br>
+        I miss kissing you more than I can explain.
+        So please save some kisses for me, because when I see
+        you again, I'm going to need a lot of them. ❤️
+      </p>
+    </details>
+
+    <details class="letter">
+      <summary>
+        <span>🤍</span>
+        <strong>When you remember our secret dates</strong>
+        <small>Open this little letter ↗</small>
+      </summary>
+      <p>
+        Remember our little secret meetings?
+        The moments when we had to be careful, the excitement
+        of seeing each other, the quiet smiles, the hugs we
+        wished could last forever.
+        <br><br>
+        Maybe they seemed like small moments at the time,
+        but they mean so much to me now.
+        I miss the way my heart would race knowing I was
+        about to see you.
+        I would choose those little moments with you over
+        a thousand perfect days without you.
+        <br><br>
+        I hope we'll have so many more memories to make. ❤️
+      </p>
+    </details>
+
+    <details class="letter">
+      <summary>
+        <span>🌙</span>
+        <strong>When the distance feels too hard</strong>
+        <small>Open this little letter ↗</small>
+      </summary>
+      <p>
+        I know this isn't easy.
+        Some days we're going to miss each other so much
+        that a phone call won't feel like enough.
+        I wish I could just walk up to you, put my arms around
+        your neck, and tell you everything is okay.
+        <br><br>
+        But until I can do that, I hope you remember that
+        there is a girl in Romania who thinks about you,
+        misses you in the middle of the most random moments,
+        and wishes she could share her everyday life with you.
+        <br><br>
+        We're far away from each other, but you still have
+        such a special place in my heart. ❤️
+      </p>
+    </details>
+
+    <details class="letter">
+      <summary>
+        <span>☀️</span>
+        <strong>When you think about next summer</strong>
+        <small>Open this little letter ↗</small>
+      </summary>
+      <p>
+        I keep thinking about next summer, about being back
+        in America and finally having the chance to see you again.
+        I imagine that first hug, the first kiss, and the moment
+        I won't have to say goodbye after just a little time together.
+        <br><br>
+        I know we can't predict everything, and I don't expect
+        every day to be perfect.
+        But I really hope you'll still want to be here with me
+        when I come back.
+        I hope you'll choose to give us that chance,
+        because I know how much it would mean to me.
+        <br><br>
+        Until then, let's keep taking care of what we have
+        and look forward to the day we meet again. ❤️
+      </p>
+    </details>
+
+  </div>
+</section>
+
+<section class="section memory">
+  <div class="eyebrow">My favourite kind of forever</div>
+  <h2>It's the little things I miss most.</h2>
+
+  <blockquote>
+    "The kisses by the fridge.<br>
+    The secret dates.<br>
+    Your arms around me.<br>
+    The way time went too fast<br>
+    whenever I was with you."
+  </blockquote>
+
+  <p class="subtitle" style="margin-top:25px">
+    I didn't know I would miss those moments this much.
+    I wish I could go back and stay in them a little longer.
+  </p>
+</section>
+
+<section class="section">
+  <div class="eyebrow">If you ever wonder</div>
+  <h2>Why you are worth the wait.</h2>
+
+  <p class="subtitle">
+    Because what we have means something to me.
+    Because I still smile when I remember you.
+    Because, even from so far away, you can make me miss
+    a hug that happened weeks ago.
+    <br><br>
+    And because I want the chance to make new memories
+    with you, not just keep replaying the old ones.
+    <br><br>
+    I can't promise that long distance will always be easy.
+    I can promise that my feelings are real, and I hope
+    we can keep choosing each other, one day at a time.
+  </p>
+</section>
+
+<section class="surprise">
+  <div class="heart">♡</div>
+  <div class="eyebrow">One last thing, just for you</div>
+  <h2>Before you go…</h2>
+
+  <p class="subtitle">
+    There is something I've been keeping in my heart.
+    Tap below, my love.
+  </p>
+
+  <button class="btn" id="surpriseBtn" onclick="revealSecret()">
+    Open your little surprise ❤️
+  </button>
+
+  <div id="secret">
+    If I could be anywhere in the world right now,
+    I would choose to be wherever you are.
+    Not because America is perfect, not because life
+    is always easy, but because even an ordinary day
+    feels special when I get to spend it with you.
+    <br><br>
+    I wish I could kiss you goodnight instead of saying it
+    through a screen. I wish I could hug you whenever I miss
+    you, hold your hand while we're walking, and steal those
+    little kisses by the fridge all over again.
+    <br><br>
+    And when next summer comes, I hope I'll get to look
+    into your eyes and feel that beautiful feeling of
+    finally being close to you again.
+    <br><br>
+    I hope you will wait for me, not because you have to,
+    but because you want to see where our story can go.
+    I want that chance with you more than you know.
+    <br><br>
+    Until then, you have a little piece of my heart
+    all the way over there in America.
+    <br><br>
+    <span style="font-size:28px;color:#b75e70">
+      I miss you. I choose you. And I hope to see you soon. ♡
+    </span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Made with love, from Romania to America <span>♥</span>
+  <br>
+  Until the distance becomes a memory.
+</footer>
+
+<script>
+function revealSecret() {
+  const secret = document.getElementById('secret');
+  const button = document.getElementById('surpriseBtn');
+
+  if (secret.style.display === 'block') {
+    secret.style.display = 'none';
+    button.textContent = 'Open your little surprise ❤️';
+  } else {
+    secret.style.display = 'block';
+    button.textContent = 'Keep this little moment close ♡';
+    setTimeout(() => {
+      secret.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100);
+  }
+}
+</script>
+
+</body>
+</html>
